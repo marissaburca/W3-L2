@@ -91,7 +91,7 @@
 
     const addClassToTitle = function () {
         const headingClass = document.getElementsByTagName('h1')[0]
-        headingClass.className = ('myHeading')
+        headingClass.className = ('myHeading') /* preferibile usere classList.add('myHeading')*/
 
     }
     addClassToTitle()
@@ -113,8 +113,8 @@
       */
 
     const changeUrls = function () {
-      const tagN = document.querySelector('a')
-      tagN.href = ('https://www.google.com')
+      const tagN = document.getElementsByTagName('a')[0]
+      tagN.href = ('https://www.google.com') 
 
     }
    changeUrls()
@@ -171,9 +171,8 @@
       */
 
     const makeItClickable = function () {
-     const touch = document.getElementsByClassName('myHeading')
-     
-     
+     const h1 = document.getElementsByTagName('h1')[0]
+     h1.innerText = h1.innerText.slice(0, -1)
     }
     
     /* ESERCIZIO 10
